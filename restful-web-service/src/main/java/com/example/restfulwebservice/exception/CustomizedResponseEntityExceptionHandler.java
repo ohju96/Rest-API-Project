@@ -6,13 +6,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.util.Date;
 
-@RestController
-@ControllerAdvice // 모든 컨트롤러가 실행될 때 이 어드바이스 어노테이션을 가지고 있는 빈이 시작되도록 되어 있다. 즉, 모든 예외 상황이 발생하면 여기서 처리된다.
+//@RestController
+//@ControllerAdvice // 모든 컨트롤러가 실행될 때 이 어드바이스 어노테이션을 가지고 있는 빈이 시작되도록 되어 있다. 즉, 모든 예외 상황이 발생하면 여기서 처리된다.
+@RestControllerAdvice
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
     // 모든 exception 처리
